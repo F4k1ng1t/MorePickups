@@ -37,7 +37,7 @@ public class PlayerBehavior : MonoBehaviour
     private bool flashlightIsOut = false;
     public bool hasFlashlight = false;
     private bool flashlightIsOn = false;
-    private bool keyIsOut = false;
+    public bool keyIsOut = false;
     public bool hasKey = false;
 
 
@@ -177,8 +177,14 @@ public class PlayerBehavior : MonoBehaviour
                 gunIsOut = false;
                 key.SetActive(true);
             }
+            
         }
-        if(Input.GetMouseButtonDown(0) && flashlightIsOut)
+        if (!hasKey && keyIsOut)
+        {
+            key.SetActive(false);
+            keyIsOut = false;
+        }
+        if (Input.GetMouseButtonDown(0) && flashlightIsOut)
         {
             flashlightIsOn = !flashlightIsOn;
             flashlightLight.SetActive(flashlightIsOn);

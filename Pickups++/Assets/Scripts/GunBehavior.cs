@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using Unity.PlasticSCM.Editor;
+
 using UnityEngine;
 
 public class GunBehavior : MonoBehaviour

@@ -36,6 +36,7 @@ public class KeyBehavior : MonoBehaviour
                 AcquireKey();
                 Text.SetActive(false);
                 gameManager.Keys += 1;
+                gameManager.currentKeys += 1;
             }
         }
     }
